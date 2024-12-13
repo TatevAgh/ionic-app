@@ -1,0 +1,37 @@
+<div class="card-container">
+  <app-pagination
+    [cardData]="cardData"
+    [itemsPerPage]="2"
+    (onPageChange)="updateDisplayedCards($event)"
+  ></app-pagination>
+  <div class="card" *ngFor="let card of displayedCards">
+    <div class="wrapper">
+      <div class="card-header">
+        <span class="tag" [ngClass]="card.sentiment.toLowerCase()">{{ card.sentiment }}</span>
+        <span class="score">Score Improvement</span>
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">{{ card.title }}</h3>
+        <p class="card-description">{{ card.description }}</p>
+        <div class="card-info">
+          <p class="card-timestamp">Last Run:
+            <span>{{ card.lastRun }}</span>
+          </p>
+          <span class="stocks">{{ card.stocks }} Stocks</span>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <div class="user-info">
+        <h3 class="user-name">{{ card.author }}</h3>
+        <ion-button class="follow-button" fill="outline" >Follow</ion-button>
+      </div>
+      <div class="stats">
+        <p class="viewed-num">{{ card.views }}</p>
+        <p class="viewed-txt">VIEWED</p>
+      </div>
+    </div>
+  </div>
+</div>

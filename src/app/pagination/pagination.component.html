@@ -1,0 +1,30 @@
+<div class="pagination-container">
+  <ion-button
+    class="pagination-button"
+    [disabled]="currentPage === 1"
+    (click)="handlePageChange(currentPage - 1)"
+    fill="outline"
+  >
+    Previous
+  </ion-button>
+
+  <div class="pagination-pages">
+    <ion-button
+      *ngFor="let page of [].constructor(totalPages); let i = index"
+      [class.active]="i + 1 === currentPage"
+      (click)="handlePageChange(i + 1)"
+      fill="outline"
+    >
+      {{ i + 1 }}
+    </ion-button>
+  </div>
+
+  <ion-button
+    class="pagination-button"
+    [disabled]="currentPage === totalPages"
+    (click)="handlePageChange(currentPage + 1)"
+    fill="outline"
+  >
+    Next
+  </ion-button>
+</div>

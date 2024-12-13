@@ -1,0 +1,52 @@
+:root {
+  --purple: #545fc2;
+  --dark-text: #222222;
+  --light-text: #fff;
+  --gray: #67677e;
+  --green-text: #69b97c;
+  --red-text: #ff584f;
+  --green-bg: #e6fbdf;
+  --red-bg: #ffe8e5;
+  --light-purple: #eceeff;
+
+  --ion-background-color: #fff;
+  --ion-background-primary: var(--light-purple);
+  --ion-text-color: var(--dark-text);
+  --ion-color-primary: var(--purple);
+  --ion-button-background-color: var(--light-text);
+  --ion-color-secondary: var(--gray);
+  --ion-toolbar-background: #fff;
+  --ion-toolbar-color: var(--dark-text);
+  --ion-box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+:root.ios {
+  --dark-text: #222222;
+  --ion-color-primary: var(--dark-text);
+}
+
+body.dark-mode {
+  --purple: #6a73e8;
+  --dark-text: #e1e1e1;
+  --light-text: #fff;
+  --gray: #9a9aa7;
+  --gray-dark: #e1e1f1;
+  --green-text: #8bd4a4;
+  --red-text: #ff8580;
+  --green-bg: #ccf7d8;
+  --red-bg: #ffdedc;
+  --light-purple: #d7d9ff;
+
+  --ion-background-color: #222222;
+  --ion-background-primary: var(--grey);
+  --ion-text-color: #e1e1e1;
+  --ion-color-primary: var(--light-purple);
+  --ion-button-background-color: none;
+  --ion-color-secondary: var(--gray-dark);
+  --ion-toolbar-background: #222222;
+  --ion-toolbar-color: var(--light-text);
+  --ion-box-shadow-color: rgba(255, 255, 255, 0.2);
+}
+body.dark-mode.ios {
+  --ion-background-color: black;
+}

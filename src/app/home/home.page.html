@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button fill="outline" class="chart-btn" (click)="openChart()">
+        {{ showChart ? 'Open Cards' : 'Open Chart' }}</ion-button>
+      <ion-button>Theme Switcher</ion-button>
+      <ion-toggle
+        [checked]="isDarkMode"
+        (ionChange)="toggleTheme($event.detail.checked)">
+      </ion-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <ng-container *ngIf="showChart; else cardList">
+      <app-chart></app-chart>
+    </ng-container>
+    <ng-template #cardList>
+      <app-card-list></app-card-list>
+    </ng-template>
+  </div>
+</ion-content>

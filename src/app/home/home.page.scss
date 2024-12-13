@@ -1,0 +1,23 @@
+ion-header {
+  background: var(--ion-toolbar-background) !important;
+}
+.content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+p {
+  color: var(--ion-text-color);
+}
+.chart-btn{
+  color: var();
+  --border-radius: 8px !important;
+}
+
+.ios {
+  ion-buttons{
+    color: var(--ion-text-color);
+    --border-radius: 8px !important;
+  }
+}
